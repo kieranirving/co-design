@@ -1,0 +1,208 @@
+$sidebar-color: #01c2ff;
+body,html {
+    background-color: #3f3f3f;
+    color: #fff !important;
+}
+.sidebar {
+    background-color: $sidebar-color;
+    width: 46px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    overflow: hidden;
+    transition: $default-transition;
+    z-index: 10;
+
+    &:hover {
+        width: 200px;
+    }
+
+    .box {
+        background-color: $sidebar-color;
+        height: 20px;
+        width: 10px;
+        position: absolute;
+        right: -1px;
+        top: 22px;
+    }
+
+    .button {
+        background-color: transparent;
+        color: #fff;
+        width: 200px;
+        text-align: left;
+        margin: 0px;
+        border: none;
+        padding: 10px 0px;
+        border-radius: 0px;
+
+        &:hover {
+            background-color: darken($sidebar-color, 20%);
+        }
+        
+        .icon {
+            width: 46px;
+            float: left;
+            text-align: center;
+        }
+    }
+
+    .user {
+        position: relative;
+        top: 20px;
+        width: 200px;
+        margin-bottom: 20px;
+
+        .avatar {
+            height: 38px;
+            width: 38px;
+            border: 2px solid #fff;
+            border-radius: 100px;
+            overflow: hidden;
+            margin-left: 4px;
+            float: left;
+        }
+
+        .username {
+            position: relative;
+            top: 9px;
+            left: 6px;
+            display: row;
+        }
+
+        .options {
+            display: inline-block;
+            margin-left: 7px;
+
+            .button {
+                display: inline-block !important;
+                width: auto !important;
+                margin-left: 5px;
+
+                &:first-child {
+                    margin-left: 0px !important;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    color: darken(#fff, 15%)
+                }
+            }
+        }
+    }
+}
+
+.topbar-search {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #9a9a9a !important;
+    font-size: 20px;
+
+    .logo {
+        top: 6px;
+        left: 10px;
+    }
+
+    .icon,
+    .site-search,
+    .logo {
+        float: left;
+        height: 100%;
+        line-height: 58px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .icon {
+        padding: 0px 5px;
+    }
+
+    .site-search {
+        width: 150px;
+        .selection {
+            width: 120px;
+            float: left;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .arrow {
+            width: 30px;
+            float: left;
+        }
+    }
+
+    .search {
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        height: 100%;
+        width: 100%;
+        padding-left: 370px;
+        padding-right: 70px;
+        position: relative;
+        top: -59px;
+        z-index: 1;
+        font-size: inherit;
+    }
+}
+
+.header {
+    background-color: darken($sidebar-color, 5%);
+    background: url('../assets/img/background.jpg');
+    background-size: 100%;
+    color: #fff;
+
+    .widget {
+        &.widget-warn {
+            border-color: #fee781;
+            background-color: #fffae6;
+            color: #000;
+        }
+    }
+
+    .ask {
+        text-align: right;
+    }
+}
+
+.content {
+    .widget {
+        margin-left: 20px;
+        float: right;
+        width: 250px;
+        color: #000;
+    }
+}
+
+.item-list .item-list--item .item-list--number-value .item-list--number {
+    color: #fff;
+}
+
+.item-list .item-list--item .item-list--number-value .item-list--number-label {
+    color: #9a9a9a;
+}
+
+.item-list .item-list--item {
+    border-bottom: 1px solid #9a9a9a !important;
+}
+
+.item-list--item {
+    .item-list--text-value {
+        div {
+            a:not(.badge) {
+                color: #fff !important;
+            }
+            a.is-master-tag { 
+                background-color: $sidebar-color;
+                color: #fff !important;
+            }
+            a.is-master-tag:hover {
+                background-color: darken($sidebar-color, 5%);
+            }
+        }
+    }
+
+    .has-anwser {
+        background-color: #465e47;
+    }
+}
