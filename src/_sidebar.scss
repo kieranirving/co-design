@@ -1,7 +1,8 @@
 $sidebar-color: #01c2ff;
+$text-color: #000;
 body,html {
-    background-color: #3f3f3f;
-    color: #fff !important;
+    background-color: #fff;
+    color: $text-color !important;
 }
 .sidebar {
     background-color: $sidebar-color;
@@ -133,7 +134,7 @@ body,html {
 
     .search {
         background-color: transparent;
-        color: #fff;
+        color: $text-color;
         border: none;
         height: 100%;
         width: 100%;
@@ -170,39 +171,43 @@ body,html {
         margin-left: 20px;
         float: right;
         width: 250px;
-        color: #000;
+        color: $text-color;
     }
 }
 
-.item-list .item-list--item .item-list--number-value .item-list--number {
-    color: #fff;
-}
+.item-list {
+    &--item {
+        border-bottom: 1px solid #9a9a9a !important;
 
-.item-list .item-list--item .item-list--number-value .item-list--number-label {
-    color: #9a9a9a;
-}
+        &--text-value {
+            div {
+                a:not(.badge) {
+                    color: $text-color !important;
+                }
 
-.item-list .item-list--item {
-    border-bottom: 1px solid #9a9a9a !important;
-}
+                a.is-master-tag { 
+                    background-color: $sidebar-color;
+                    color: #fff !important;
+                }
 
-.item-list--item {
-    .item-list--text-value {
-        div {
-            a:not(.badge) {
-                color: #fff !important;
-            }
-            a.is-master-tag { 
-                background-color: $sidebar-color;
-                color: #fff !important;
-            }
-            a.is-master-tag:hover {
-                background-color: darken($sidebar-color, 5%);
+                a.is-master-tag:hover {
+                    background-color: darken($sidebar-color, 5%);
+                }
             }
         }
-    }
 
-    .has-anwser {
-        background-color: #465e47;
+        .item-list--number-value {
+            .item-list--number {
+                color: $text-color;
+            }
+            
+            .item-list--number-label {
+                color: lighten($text-color, 50%);
+            }
+        }
+    
+        &.has-anwser {
+            background-color: #d7ffd9;
+        }
     }
 }
