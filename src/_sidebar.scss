@@ -165,20 +165,37 @@ body,html {
     background-size: 100%;
     color: #fff;
 
-    .is-site-tag {
-        color: #000 !important;
-    }
-
-    .widget {
-        &.widget-warn {
-            border-color: #fee781;
-            background-color: #fffae6;
-            color: #000;
+    .container { 
+        padding-bottom: 30px;
+    
+        .widget {
+            &.widget-warn {
+                border-color: #fee781;
+                background-color: #fffae6;
+                color: #000;
+            }
         }
-    }
-
-    .ask {
-        text-align: right;
+    
+        .ask,
+        .sites {
+            position: relative;
+        }
+    
+        .sites {
+            text-align: left;
+            float: left;
+            .button {
+                .icon {
+                    float: left;
+                    padding-right: 5px;
+                }
+            }
+        }
+    
+        .ask {
+            text-align: right;
+            float: right;
+        }
     }
 }
 
@@ -195,11 +212,39 @@ body,html {
         }
     }
 
-    .widget {
-        margin-left: 20px;
+    .widgets {
         float: right;
-        width: 250px;
-        color: $text-color;
+        margin-left: 20px;
+        max-width: 250px;
+
+        .widget {
+            &--announce {
+                
+            }
+    
+            &--community {
+                & {
+                    box-shadow: none;
+                }
+                border: none;
+                font-size: 14px;
+                
+                .widget--body {
+                    border-bottom: none;
+
+                    .link {
+                        margin-bottom: 10px;
+
+                        a {
+                            .icon {
+                                float: left;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
